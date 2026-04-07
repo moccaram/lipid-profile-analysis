@@ -1,0 +1,2 @@
+test,statistic,df,p_value,cramers_v
+Chi-square (sex × BMI group),0.403,2,0.8176,0
