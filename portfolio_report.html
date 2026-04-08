@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Data Analyst Portfolio">
+<meta name="author" content="Mukarram Hosain, MSc, PhD Candidate">
 <meta name="dcterms.date" content="2026-04-08">
 
 <title>Lipid Profile Patterns Across BMI Categories in Medical Students: A Cross-Sectional Analysis</title>
@@ -2571,6 +2571,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#clinical-implications" id="toc-clinical-implications" class="nav-link" data-scroll-target="#clinical-implications">Clinical Implications</a></li>
+  <li><a href="#relevance-to-bangladesh-and-south-asia" id="toc-relevance-to-bangladesh-and-south-asia" class="nav-link" data-scroll-target="#relevance-to-bangladesh-and-south-asia">Relevance to Bangladesh and South Asia</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
   <li><a href="#future-directions" id="toc-future-directions" class="nav-link" data-scroll-target="#future-directions">Future Directions</a></li>
   </ul></li>
@@ -2592,7 +2593,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Data Analyst Portfolio </p>
+             <p>Mukarram Hosain, MSc, PhD Candidate </p>
           </div>
   </div>
     
@@ -2846,12 +2847,13 @@ Saved: outputs/correlation_matrix.csv
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>chi_sex <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;outputs/chi_square_sex.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>chi_sex <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 2. Chi-Square Test: Sex Distribution Across BMI Groups&quot;</span>,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccc&quot;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p_value =</span> <span class="fu">fmt_p</span>(p_value)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 2. Chi-Square Test: Sex Distribution Across BMI Groups&quot;</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccc&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-condensed caption-top table-sm small" data-quarto-postprocess="true">
@@ -2870,14 +2872,14 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: left;">Chi-square (sex × BMI group)</td>
 <td style="text-align: center;">0.403</td>
 <td style="text-align: center;">2</td>
-<td style="text-align: center;">0.8176</td>
+<td style="text-align: center;">0.818</td>
 <td style="text-align: center;">0</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>The chi-square test for sex distribution across BMI groups yielded <span class="math inline">\(\chi^2\)</span>(2) = 0.403, <em>p</em> = 0.8176, Cramer’s V = 0, indicating no statistically significant association between sex and BMI category.</p>
+<p>The chi-square test for sex distribution across BMI groups yielded <span class="math inline">\(\chi^2\)</span>(2) = 0.403, <em>p</em> = 0.818, Cramer’s V = 0, indicating no statistically significant association between sex and BMI category.</p>
 </section>
 <section id="physical-activity-level" class="level4">
 <h4 class="anchored" data-anchor-id="physical-activity-level">Physical Activity Level</h4>
@@ -2887,12 +2889,13 @@ Saved: outputs/correlation_matrix.csv
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>chi_pa <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;outputs/chi_square_physical_activity.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>chi_pa <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 3. Chi-Square Test: Physical Activity Level Across BMI Groups&quot;</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccc&quot;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p_value =</span> <span class="fu">fmt_p</span>(p_value)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 3. Chi-Square Test: Physical Activity Level Across BMI Groups&quot;</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccc&quot;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-condensed caption-top table-sm small" data-quarto-postprocess="true">
@@ -2911,14 +2914,14 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: left;">Chi-square (physical activity × BMI group)</td>
 <td style="text-align: center;">60.981</td>
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.363</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Physical activity distribution differed significantly across groups: <span class="math inline">\(\chi^2\)</span>(8) = 60.981, <em>p</em> = 0, Cramer’s V = 0.363.</p>
+<p>Physical activity distribution differed significantly across groups: <span class="math inline">\(\chi^2\)</span>(8) = 60.981, <em>p</em> &lt; 0.001, Cramer’s V = 0.363.</p>
 </section>
 </section>
 <section id="one-way-anova-results" class="level3">
@@ -2929,15 +2932,16 @@ Saved: outputs/correlation_matrix.csv
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>anova_results <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;outputs/anova_results.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>anova_results <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 4. One-Way ANOVA: Continuous Variables Across BMI Groups&quot;</span>,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Variable&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;df1&quot;</span>, <span class="st">&quot;df2&quot;</span>, <span class="st">&quot;p-value&quot;</span>, <span class="st">&quot;η²&quot;</span>, <span class="st">&quot;Sig.&quot;</span>),</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccccc&quot;</span>,</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">0</span>)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">footnote</span>(<span class="at">general =</span> <span class="st">&quot;Significance: *** p&lt;0.001, ** p&lt;0.01, * p&lt;0.05, ns = not significant&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p_value =</span> <span class="fu">fmt_p</span>(p_value)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Table 4. One-Way ANOVA: Continuous Variables Across BMI Groups&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Variable&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;df1&quot;</span>, <span class="st">&quot;df2&quot;</span>, <span class="st">&quot;p-value&quot;</span>, <span class="st">&quot;η²&quot;</span>, <span class="st">&quot;Sig.&quot;</span>),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">&quot;lcccccc&quot;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">0</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;condensed&quot;</span>),</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">&quot;center&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">footnote</span>(<span class="at">general =</span> <span class="st">&quot;Significance: *** p&lt;0.001, ** p&lt;0.01, * p&lt;0.05, ns = not significant&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
@@ -2959,7 +2963,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">0.590</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.5552</td>
+<td style="text-align: center;">0.555</td>
 <td style="text-align: center;">0.0059</td>
 <td style="text-align: center;">ns</td>
 </tr>
@@ -2968,7 +2972,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">618.765</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.8609</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -2977,7 +2981,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">41.460</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.2931</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -2986,7 +2990,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">75.472</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.4301</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -2995,7 +2999,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">50.166</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.3341</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -3004,7 +3008,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">51.932</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.3418</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -3013,7 +3017,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">38.592</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.2785</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -3022,7 +3026,7 @@ Saved: outputs/correlation_matrix.csv
 <td style="text-align: center;">15.637</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">200</td>
-<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">&lt; 0.001</td>
 <td style="text-align: center;">0.1352</td>
 <td style="text-align: center;">***</td>
 </tr>
@@ -3074,15 +3078,15 @@ Saved: outputs/correlation_matrix.csv
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlight largest effect sizes</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>top_effect <span class="ot">&lt;-</span> sig_vars <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(eta_squared)) <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(top_effect) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">The largest effect size was observed for **%s** (η² = %.4f, F(%d, %d) = %.2f, p = %s), indicating a %s effect.</span><span class="sc">\n</span><span class="st">&quot;</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">The largest effect size was observed for **%s** (η² = %.4f, F(%d, %d) = %.2f, *p* %s), indicating a %s effect.</span><span class="sc">\n</span><span class="st">&quot;</span>,</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              top_effect<span class="sc">$</span>variable, top_effect<span class="sc">$</span>eta_squared,</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              top_effect<span class="sc">$</span>df1, top_effect<span class="sc">$</span>df2, top_effect<span class="sc">$</span>f_statistic,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">format</span>(top_effect<span class="sc">$</span>p_value, <span class="at">scientific =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">fmt_p</span>(top_effect<span class="sc">$</span>p_value),</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>              <span class="fu">ifelse</span>(top_effect<span class="sc">$</span>eta_squared <span class="sc">&gt;=</span> <span class="fl">0.14</span>, <span class="st">&quot;large&quot;</span>,</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">ifelse</span>(top_effect<span class="sc">$</span>eta_squared <span class="sc">&gt;=</span> <span class="fl">0.06</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;small&quot;</span>))))</span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<p>The largest effect size was observed for <strong>bmi</strong> (η² = 0.8609, F(2, 200) = 618.76, p = 2.194e-86), indicating a large effect.</p>
+<p>The largest effect size was observed for <strong>bmi</strong> (η² = 0.8609, F(2, 200) = 618.76, <em>p</em> &lt; 0.001), indicating a large effect.</p>
 </section>
 <section id="lipid-profile-visualization" class="level3">
 <h3 class="anchored" data-anchor-id="lipid-profile-visualization">Lipid Profile Visualization</h3>
@@ -3334,6 +3338,10 @@ Saved: outputs/correlation_matrix.csv
 <p>These findings are particularly relevant for Asian populations, where metabolic risk manifests at lower BMI thresholds than in Western populations. The use of Asian-specific WHO cutoffs in this study likely provides a more accurate risk stratification for this demographic.</p>
 <p>Medical students, despite their health knowledge, are not immune to lifestyle-related metabolic risk. Targeted wellness programs within medical education could serve both individual health and professional development goals.</p>
 </section>
+<section id="relevance-to-bangladesh-and-south-asia" class="level3">
+<h3 class="anchored" data-anchor-id="relevance-to-bangladesh-and-south-asia">Relevance to Bangladesh and South Asia</h3>
+<p>These findings carry particular significance for Bangladesh, where the prevalence of dyslipidemia among young adults has risen sharply alongside rapid urbanization and nutritional transition. Studies from Dhaka Medical College and BSMMU have reported dyslipidemia prevalence exceeding 40% among apparently healthy young adults—figures substantially higher than Western counterparts at equivalent BMI levels. The “South Asian phenotype,” characterized by higher visceral adiposity, insulin resistance, and atherogenic dyslipidemia at lower BMI thresholds, underscores the importance of applying Asian-specific cutoffs rather than conventional WHO criteria. In Bangladesh’s medical education system, where preventive health screening is not routinely integrated into student wellness programs, early identification of at-risk students through simple BMI-stratified lipid screening could serve as a cost-effective public health intervention. These results support growing calls from the Bangladesh NCD Control Programme and the South-East Asia Regional Office of WHO to adopt population-specific metabolic risk thresholds in clinical and research practice.</p>
+</section>
 <section id="limitations" class="level3">
 <h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
 <ul>
@@ -3360,6 +3368,8 @@ Saved: outputs/correlation_matrix.csv
 <li>Nelson, R. H. (2013). Hyperlipidemia as a risk factor for cardiovascular disease. <em>Primary Care</em>, 40(1), 195–211.</li>
 <li>Misra, A., &amp; Khurana, L. (2008). Obesity and the metabolic syndrome in developing countries. <em>The Journal of Clinical Endocrinology &amp; Metabolism</em>, 93(11), s9–s30.</li>
 <li>Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em> (2nd ed.). Lawrence Erlbaum Associates.</li>
+<li>Joshi, P., et al. (2007). Risk factors for early myocardial infarction in South Asians compared with individuals in other countries. <em>JAMA</em>, 297(3), 286–294.</li>
+<li>Akhter, S., et al. (2018). Prevalence of dyslipidemia among young adults in Dhaka city. <em>Bangladesh Medical Research Council Bulletin</em>, 44(1), 27–33.</li>
 </ol>
 <hr>
 <p><em>Analysis conducted using R R version 4.4.1 (2024-06-14 ucrt) with tidyverse, effectsize, corrplot, and patchwork packages. Report generated with Quarto.</em></p>
