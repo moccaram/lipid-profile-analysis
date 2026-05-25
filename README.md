@@ -1,4 +1,4 @@
-# Lipid Profile Analysis — Portfolio Project
+# Lipid Profile Analysis
 
 Cross-sectional analysis of lipid profile patterns across BMI categories
 in medical students using Asian WHO cutoffs.
