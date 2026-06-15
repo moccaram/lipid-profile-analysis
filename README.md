@@ -18,7 +18,7 @@ Quarto · academic reporting · effect sizes (η²) · survey data analysis
 3. Run: `quarto render portfolio_report.qmd`
 
 ## Report
-[View rendered HTML report](https://moccaram.github.io/lipid-profile-portfolio/portfolio_report.html)
+[View rendered HTML report](https://moccaram.github.io/lipid-profile-analysis/portfolio_report.html)
 
 ## Author
 Mukarram Hosain, MSc | PhD Candidate | Data Analyst
